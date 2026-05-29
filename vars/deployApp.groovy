@@ -1,6 +1,6 @@
 def call (Map config) {
     script {
-        def imageName = config.environment == "main" ? "nodemain:${config.imageTag}" : "nodedev:${config.imageTag}"
+        def imageName = config.environment == "main" ? "d3f4ault/nodemain:${config.imageTag}" : "d3f4ault/nodedev:${config.imageTag}"
         def containerName = "node${config.environment}"
         def port = config.environment == "main" ? "3000" : "3001"
         withCredentials([usernamePassword(
